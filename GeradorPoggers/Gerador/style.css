@@ -1,0 +1,313 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+/* Reset e configurações gerais */
+* {
+    font-family: "Lexend Exa", sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image:url(assets/backgroud.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Navbar fixa */
+nav {
+    background-color: #18181B;
+    top: 0;
+    position: fixed;
+    height: 10vh;
+    z-index: 1000;
+    box-shadow: 0 4px 8px #006400;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    position: relative;
+}
+
+.navtext{
+    margin-left: 58px;
+    margin-top: 20px;
+}
+
+.logopass{
+     max-width: 80px;
+     position:absolute;
+}
+
+section{
+    height: 90vh;
+}
+
+/* Logo */
+.logo {
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+/* Título */
+h1 {
+    color: #DfDfDf;
+    margin-left: 20px;
+    font-size: 50px;
+    margin-top: 5px;
+}
+
+/* Container principal */
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 1%;
+}
+
+#gerador {
+    width: 50%;
+    margin-right: 20px;
+}
+
+#lore {
+    width: 45%;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Seção de checkboxes */
+#checkboxes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+/* Personalizacao dos checkboxes */
+input[type="checkbox"] {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: #313131;
+    border-radius: 50%;
+    border: 2px solid #fff
+}
+input[type="checkbox"]:checked{
+    background-color: #006400;
+}
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+
+
+/* Container de entrada */
+.container-input {
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+/* Texto acima do slider */
+.container-input span {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Slider (barra de quantidade de caracteres) */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #3eb72b;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.8s ease-in-out, background-color 0.3s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background-color: #313131;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    border-radius: 15px;
+    background: #DfDfDf;
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+}
+
+/* Botão Gerar Senha */
+.button-cta {
+    height: 45px;
+    background-color: #3eb72b;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.button-cta:hover {
+    background-color: #006400;
+}
+
+/* Container da senha gerada */
+.container-password {
+    max-width: 480px;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    margin: -20px 0 10px;
+}
+
+/* Estilo da senha */
+.password {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #313131;
+    transition: transform 0.4s;
+}
+
+.password:hover {
+    transform: scale(1.03);
+}
+
+/* Tooltip (dica) */
+.tooltip {
+    color: #fff;
+    position: relative;
+    top: 15px;
+    padding: 6px 8px;
+    background: rgb(15, 15, 15);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.container-password:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+.botoesdwl{
+    display: flex;
+}
+
+#button{
+    width:80%;
+}
+#download {
+    width: 15%;
+    margin-top: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #3eb72b;
+    border: 0;
+    color: #fff;
+    font-size: 17px;
+    transition: background-color 0.3s ease;
+}
+
+#download:hover{
+    background-color: #006400;
+}
+
+/* Estilos gerais */
+
+.hide {
+    display: none;
+}
+
+#botao-sobre{
+    display: flex;
+    align-items: center;
+}
+#saiba-mais{
+    width: 500px; 
+}
+#saiba-mais:hover{
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 900px) {
+    body{
+        background-color: #000;
+    }
+    #container {
+        flex-direction: column; /* Muda o layout para coluna */
+        align-items: center;
+    }
+    
+    #gerador {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    #lore {
+        width: 100%;
+        font-size: 1rem; /* Menor texto para dispositivos móveis */
+        margin-top: 20px;
+    }
+
+    .navtext {
+        font-size: 28px; /* Texto menor na navbar */
+        margin-left: 32px;
+    }
+
+    .logopass {
+        max-width: 50px; /* Logo menor em telas de celular */
+    }
+}
+
+@media (max-width: 1500px){
+    #lore {
+        font-size: 0.9rem;
+    }
+}

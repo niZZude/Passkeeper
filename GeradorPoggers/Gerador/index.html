@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <!-- Tag META define metadados sobre um documento HTML. Metadados são dados (informações) sobre dados -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Gerador de senhas">
+  <link rel="stylesheet" href="style.css">
+  <title>PassKeeper</title>
+  <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <nav>
+    <h1 class="navtext">assKeeper</h1>
+    <img src="assets/Logo.png" alt="" class="logopass">
+  </nav>
+<section id="home">
+  <div id="container">
+    <div id="gerador">
+      <div class="container-input">
+        <div id="checkboxes">
+          <label><input type="checkbox" id="incluirMaiuscula" checked> Letras maiusculas</label> <br>
+          <label><input type="checkbox" id="incluirMinuscula" checked> Letras minusculas</label> <br>
+          <label><input type="checkbox" id="incluirNumero" checked> Numeros</label> <br>
+          <label><input type="checkbox" id="incluirSimbolo" checked> Simbolos</label> <br>
+        </div>
+        <span>Tamanho: <span id="valor"></span> Caracteres</span>
+        <input id="slider" class="slider" type="range" min="6" max="16" value="8"/>
+    
+        <div class="botoesdwl">
+          <button id="button" class="button-cta" onclick="generatePassword()">Gerar senha</button>
+          <button id="download"><i class="fa-solid fa-download fa-shake"></i></button>
+        </div>
+      </div>
+    
+      <div id="container-password" onclick="copyPassword()" class="container-password hide">
+        <span class="title">Sua senha gerada foi:</span>
+        <span id="password"  class="password"></span>
+        <span class="tooltip">Clique na senha para copiar. 🛡️</span>
+      </div>
+    </div>
+    <div id="lore">
+    <p>🔒 Senhas Fortes e Seguras em Apenas Alguns Cliques! <br><br>
+
+        Com o PassKeeper, gerar senhas seguras nunca foi tão fácil. Esqueça a preocupação de criar combinações complexas ou tentar lembrar dezenas de senhas diferentes. Nosso gerador de senhas é totalmente personalizável, permitindo que você crie senhas fortes com letras maiúsculas e minúsculas, números e símbolos, tudo de maneira rápida e prática.
+        <br><br>
+        💡 Por Que Escolher o PassKeeper?
+      <br><br>
+      1. Facilidade de Uso: Não precisa ser um especialista em segurança para gerar senhas seguras. Basta clicar em um botão e obter uma senha complexa, pronta para ser usada em qualquer serviço online.
+      <br><br>
+      2. Personalização Completa: Escolha os critérios que deseja para sua senha. O PassKeeper permite ajustar o comprimento da senha e incluir ou excluir tipos específicos de caracteres, para que você tenha total controle sobre a segurança que precisa.
+      <br><br>
+      3. 100% Gratuito: A segurança online não precisa custar caro. O PassKeeper oferece um gerador de senhas de alta qualidade totalmente GRATUITO, para que todos possam proteger suas contas sem nenhum custo.
+      
+    
+    </p>
+    </div>
+  </div>
+</section>
+  <script src="script.js"></script>
+
+</body>
+</html>
